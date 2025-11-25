@@ -3,89 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HL GROUPE — Création Digitale & Automatisation</title>
+    <title>HL GROUPE — Site Officiel</title>
 
-    <!-- Lien CSS -->
+    <!-- Lien vers le style -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Background vidéo -->
-    <video class="video-bg" autoplay muted loop playsinline>
-        <source src="assets/bg.mp4" type="video/mp4">
-    </video>
-
-    <!-- Fallback si la vidéo ne se charge pas -->
+    <!-- Background fallback -->
     <div class="fallback-bg"></div>
 
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
         <h1 class="brand-title">HL GROUPE</h1>
     </header>
 
-    <!-- MAIN -->
+    <!-- Main -->
     <main>
 
-        <!-- Impact intro -->
         <section class="impact">
-            <h2 style="font-size:2rem; font-weight:700;">Création Digitale • Automatisation • Stratégie Vidéo</h2>
-            <p>Nous transformons votre présence digitale avec des expériences modernes, élégantes et performantes.</p>
+            <h2>Création digitale & Stratégie premium</h2>
+            <p>Automatisation, branding, vidéo & performance.</p>
         </section>
 
         <!-- Stats -->
         <section class="stats">
             <div class="card">
-                <div class="metric">+120</div>
-                <div class="label">Projets livrés</div>
+                <p class="metric">+120</p>
+                <p class="label">Projets livrés</p>
             </div>
 
             <div class="card">
-                <div class="metric">+85</div>
-                <div class="label">Clients accompagnés</div>
+                <p class="metric">+8 ans</p>
+                <p class="label">Expérience</p>
             </div>
 
             <div class="card">
-                <div class="metric">4.9★</div>
-                <div class="label">Satisfaction Moyenne</div>
+                <p class="metric">98%</p>
+                <p class="label">Clients satisfaits</p>
             </div>
         </section>
 
         <!-- Team -->
-        <section style="margin-top:60px;">
-            <h2 style="text-align:center; margin-bottom:20px;">Notre équipe</h2>
+        <h2 style="margin-top:50px; text-align:center;">Équipe</h2>
 
-            <div class="team">
+        <section class="team">
+            <div class="card member">
+                <h3>Dika — Directeur Créatif</h3>
+                <p>Stratégie visuelle, branding, vidéo premium.</p>
+            </div>
 
-                <div class="card member">
-                    <h3>Hammouda Kadi (Dika)</h3>
-                    <p>Directeur Créatif — Stratégie digitale, automation, design premium.</p>
-                </div>
-
-                <div class="card member">
-                    <h3>Montage & Vidéo</h3>
-                    <p>Création de contenus cinématiques, courts-métrages et vidéos premium.</p>
-                </div>
-
-                <div class="card member">
-                    <h3>Développement Web</h3>
-                    <p>Sites modernes, animations, expériences immersives et optimisées.</p>
-                </div>
-
+            <div class="card member">
+                <h3>Assistant IA</h3>
+                <p>Automatisation, optimisation & systèmes.</p>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
-        <h3>Reste informé</h3>
-        <p>Inscris-toi pour recevoir nos nouveautés, outils et ressources exclusives.</p>
-
-        <form class="form" onsubmit="event.preventDefault(); alert('Merci ! Nous te recontactons très vite.');">
-            <input type="email" placeholder="Votre email" required>
-            <button type="submit">S’inscrire</button>
-        </form>
+        <p>Recevoir nos nouveautés :</p>
+        <input type="email" placeholder="Votre email…">
+        <button>S’inscrire</button>
     </footer>
 
 </body>
