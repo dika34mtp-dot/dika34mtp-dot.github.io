@@ -1,9 +1,9 @@
-/* =========================
-   HL GROUPE – PREMIUM THEME
-   Design Ultra Pro / Luxe
-   =========================*/
+/* ======================================================
+   HL GROUPE — THEME PREMIUM LUXE++
+   Glassmorphism / Or / Cinematic FX  
+====================================================== */
 
-/* Global Reset */
+/* ===== GLOBAL RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -15,146 +15,213 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #0e0e0f;
-    color: white;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* Container */
+
+
+/* ===== BACKGROUND VIDEO ===== */
+.video-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+    z-index: -1;
+    filter: brightness(0.45) saturate(1.2);
+}
+
+
+
+/* ===== GLASS CONTAINER ===== */
 .container {
     width: 90%;
     max-width: 1400px;
     margin: auto;
+    padding: 40px 0;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
 }
 
-/* =========================
-   NAVBAR
-   ========================= */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 0;
-    z-index: 1000;
-    transition: 0.3s ease;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid transparent;
-}
 
-.navbar.scrolled {
-    background: rgba(0, 0, 0, 0.65);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.nav-inner {
-    width: 90%;
-    max-width: 1400px;
+/* ===== NAVIGATION ===== */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 25px 0;
 }
 
-.navbar .logo {
-    font-size: 1.8rem;
+nav .logo {
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: #f5d372;
+    text-transform: uppercase;
+
+    text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.7),
+        0 0 20px rgba(255, 215, 0, 0.4);
 }
 
-.nav-links {
+nav ul {
     display: flex;
-    gap: 30px;
+    gap: 45px;
+    list-style: none;
 }
 
-.nav-links a {
-    color: white;
-    font-weight: 500;
+nav ul li a {
+    color: #eee;
+    font-size: 1.1rem;
+    text-decoration: none;
+    position: relative;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #12c2e9;
+nav ul li a:hover {
+    color: #f5d372;
 }
 
-/* Mobile Menu Button */
-#mobileMenuBtn {
-    display: none;
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f5d372;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s;
 }
 
-@media (max-width: 900px) {
-    #mobileMenuBtn {
-        display: block;
-        cursor: pointer;
-        font-size: 1.8rem;
-    }
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: #000;
-        padding: 20px;
-        flex-direction: column;
-        width: 220px;
-        display: none;
-    }
-    .nav-links.active {
-        display: flex;
-    }
+nav ul li a:hover::after {
+    width: 100%;
 }
 
-/* =========================
-   HERO SECTION
-   ========================= */
 
+
+/* ===== HERO SECTION ===== */
 .hero {
-    height: 100vh;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.9)
-    ),
-    url('assets/hero-bg.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 0 5%;
-}
-
-.hero-content {
-    max-width: 650px;
-    opacity: 0;
-    transition: 1.2s ease-in-out;
+    text-align: center;
+    padding: 120px 0 160px;
+    color: white;
 }
 
 .hero h1 {
-    font-size: 3.8rem;
+    font-size: 4rem;
+    line-height: 1.2;
     font-weight: 800;
+    background: linear-gradient(90deg, #f5d372, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 
+        0px 0px 25px rgba(255, 215, 0, 0.5),
+        0px 0px 45px rgba(255, 255, 255, 0.2);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin: 20px 0;
+    margin-top: 25px;
+    font-size: 1.4rem;
     opacity: 0.85;
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, #12c2e9, #0f87ff);
-    padding: 14px 26px;
-    border-radius: 10px;
-    color: white;
+
+
+/* ===== BUTTON LUXE ===== */
+.btn-luxe {
+    margin-top: 40px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
     font-weight: 600;
-    display: inline-block;
-    margin-top: 20px;
-    transition: 0.3s ease;
+
+    color: #000;
+    background: linear-gradient(135deg, #f5d372, #e0b24a);
+    border: none;
+    border-radius: 50px;
+
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.45);
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btn-primary:hover {
-    transform: translateY(-4px);
-    opacity: 0.9;
+.btn-luxe:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.65);
 }
 
-/* Add more sections styling if needed… */
+
+
+/* ===== SECTION CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+
+    transition: 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 45px rgba(255, 215, 0, 0.45);
+}
+
+.card h3 {
+    color: #f5d372;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #ddd;
+    opacity: 0.85;
+}
+
+
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 100px;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+footer p {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+
+
+/* ===== SMOOTH ANIMATIONS ===== */
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
